@@ -33,13 +33,14 @@ ls sample/
 0000_out.txt  0001_out.txt  0002_out.txt  0003_out.txt  0004_out.txt  0005_out.txt
 ```
 + There can not be multiple executable files in your project directory or its subdirs. If it is so, you will be asked to edit appFilePath.txt file manually. (script is ignoring ./.git/ directory)
-+ If sample 0003_in.txt is missing, samples with higher numbers will be ignored.
++ If running without arguments with one or more samples missing, samples with higher numbers will be ignored.
 + Range of sample file name is 0000_in.txt - 9999_in.txt
 
 Features
 --------
-+ You can specify what sample you want to test by adding argument 1:
++ You can specify what sample you want to test by adding arguments:
 
-```
-./local-progtest.sh 3
-```
++ `./local-progtest.sh 3` will only run sample 3 (files 00003_in/out.txt)
++ `./local-progtest.sh 5 99 8` will only run samples 5, 99 and 8 in given order
+
++ Note that using number of nonexistent sample will stop the testing (all next arguments will be ignored)
