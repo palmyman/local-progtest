@@ -11,7 +11,7 @@ local-progtest
         by Lubomir Cuhel      |_|              |___/  www.palmyman.com
 
 
-Local Progtest is sample tester for CTU server progtest.fit.cvut.cz
+Local Progtest is sample tester for CTU server progtest.fit.cvut.cz. Compares output of your program to reference and prints diff.
 
 Basic Manual
 ------------
