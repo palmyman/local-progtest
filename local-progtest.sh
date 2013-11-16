@@ -19,7 +19,7 @@ fi
 if [ -r appFilePath.txt ]; then
 	found=`cat appFilePath.txt | wc -l`;
 else 
-	found = 0;
+	found=0;
 fi
 if [ "$found" = "1" ]; then		
 	appFile=`cat appFilePath.txt`;
