@@ -1,4 +1,4 @@
-local-progtest
+local progtest
 ==============
 
          _                 _                         _            _   
