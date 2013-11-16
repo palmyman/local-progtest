@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "###############################################################################";
+clear;
 echo "         _                 _                         _            _   
         | |               | |                       | |          | |  
         | | ___   ___ __ _| |  _ __  _ __ ___   __ _| |_ ___  ___| |_ 
@@ -9,6 +9,7 @@ echo "         _                 _                         _            _
                               | |               __/ |                 
         by Lubomir Cuhel      |_|              |___/  www.palmyman.com   
                               ";
+echo "                 FORK ME @ www.github.com/palmyman/local-progtest";
 echo "###############################################################################";
 zero=000;
 if [ ! -r appFilePath.txt ]; then
@@ -23,25 +24,29 @@ fi
 if [ "$found" = "1" ]; then		
 	appFile=`cat appFilePath.txt`;
 	if [ ! -f $appFile ]; then
-			echo "Ivalid path to app file loaded. Edit or delete appFilePath.txt config file.";
-			echo "path: $appFile";
-			exit;
+		echo "path: $appFile";
+		echo "Invalid path to app file loaded. Edit or delete appFilePath.txt config file.";
+		echo "README can be seen @ www.github.com/palmyman/local-progtest";
+		exit;
 	fi	
 	echo "path: $appFile";
 	echo "date: `date`";
 elif [ "$found" = "0" ]; then
 	echo "No app file candidates found in this project directory. Please build the project.";
+	echo "README can be seen @ www.github.com/palmyman/local-progtest";
 	rm -f appFilePath.txt;
 	exit;
 else
 	echo "Multiple app file candidates found:";
 	cat appFilePath.txt;
 	echo "Please edit appFilePath.txt config file to have only one line.";
+	echo "README can be seen @ www.github.com/palmyman/local-progtest";
 	exit;
 fi
 
 if [ ! -r  ./sample/0000_in.txt ]; then
 	echo "Sample 0000_in.txt not found. Samples have to be saved in ./sample directory.";
+	echo "README can be seen @ www.github.com/palmyman/local-progtest";
 	exit;
 fi
 
@@ -92,5 +97,5 @@ printf "Total\tCorrect\tErrors\tSuccess\n";
 printf "$count\t$correct\t$errors\t$success%%\n";
 echo "###############################################################################";
 if [ "$success" = "100.00" ]; then
-	echo "Well done :) If you like it or/and have any ideas star this project at ";
+	echo "Well done :) If you like it and/or have any ideas check this repo @ GitHub.";
 fi
